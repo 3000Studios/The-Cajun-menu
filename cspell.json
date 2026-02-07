@@ -13,12 +13,10 @@
     "render.yaml",
     "api/reserve.js",
     "project-plan.html",
-    "project-planner.html",
     "book-a-table.html",
     "catering.html",
     "delivery.html",
-    "package-lock.json",
-    "src/project-planner/**"
+    "package-lock.json"
   ],
   "words": [
     "andouille",

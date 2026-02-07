@@ -14,8 +14,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         catering: resolve(__dirname, 'catering.html'),
         delivery: resolve(__dirname, 'delivery.html'),
-        projectPlan: resolve(__dirname, 'project-plan.html'),
-        projectPlanner: resolve(__dirname, 'project-planner.html')
+        projectPlan: resolve(__dirname, 'project-plan.html')
       }
     }
   }

@@ -232,9 +232,17 @@
         /* --- Core Typography & Reset --- */
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #020617;
+            background-color: #2a0b45;
+            background-image: linear-gradient(rgba(24,16,40,0.84), rgba(24,16,40,0.84)), url('/images/wallpaper.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             color: #f8fafc;
             overflow-x: hidden;
+        }
+        @media (max-width: 768px) {
+            body { background-attachment: scroll; }
         }
         h1, h2, h3, h4, h5, h6, .font-heading {
             font-family: 'Rye', serif;
@@ -680,7 +688,6 @@
                 <li class="filigree-item"><a href="index.html#menu" class="filigree-link filigree-menu"><span class="filigree-label">Menu</span><span class="filigree-sub">03 // Menu</span><span class="filigree-box"></span></a></li>
                 <li class="filigree-item"><a href="catering.html" class="filigree-link filigree-catering"><span class="filigree-label">Catering</span><span class="filigree-sub">04 // Catering</span><span class="filigree-box"></span></a></li>
                 <li class="filigree-item"><a href="delivery.html" class="filigree-link filigree-delivery"><span class="filigree-label">Delivery</span><span class="filigree-sub">05 // Delivery</span><span class="filigree-box"></span></a></li>
-                <li class="filigree-item"><a href="project-planner.html" class="filigree-link filigree-planner"><span class="filigree-label">Planner</span><span class="filigree-sub">06 // Planner</span><span class="filigree-box"></span></a></li>
             </ul>
         </div>
     </nav>
@@ -691,7 +698,6 @@
         <li class="nav-item"><a href="index.html#menu" class="nav-link"><div class="filigree-box"></div><span class="nav-label">Menu</span><span class="nav-sub">03 // MENU</span></a></li>
         <li class="nav-item"><a href="catering.html" class="nav-link"><div class="filigree-box"></div><span class="nav-label">Catering</span><span class="nav-sub">04 // CATERING</span></a></li>
         <li class="nav-item"><a href="delivery.html" class="nav-link"><div class="filigree-box"></div><span class="nav-label">Delivery</span><span class="nav-sub">05 // DELIVERY</span></a></li>
-        <li class="nav-item"><a href="project-planner.html" class="nav-link"><div class="filigree-box"></div><span class="nav-label">Planner</span><span class="nav-sub">06 // PLANNER</span></a></li>
     </ul>
 </nav>
     <main class="py-24 relative">

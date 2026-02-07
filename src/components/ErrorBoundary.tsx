@@ -25,8 +25,8 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     if (this.state.hasError) {
       return (
         this.props.fallback || (
-          <div className="min-h-screen flex items-center justify-center bg-[color:var(--bg)] text-[color:var(--text)] px-6">
-            <div className="max-w-md text-center space-y-3">
+          <div className="min-h-screen flex items-center justify-center text-[color:var(--text)] px-6">
+            <div className="max-w-md text-center space-y-3 wallpaper-panel rounded-3xl border border-white/10 p-8">
               <h1 className="text-2xl font-serif">We’re fixing a quick hiccup</h1>
               <p className="text-sm text-[color:var(--muted)]">
                 Please refresh the page. If this keeps happening, call us at (678) 899-7404.

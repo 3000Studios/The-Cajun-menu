@@ -8,7 +8,6 @@ This plan outlines the steps to resolve all ESLint errors, synchronize the repos
 - [ ] Identify files requiring manual fixes that `--fix` cannot handle.
 
 ## Phase 2: Code Correction
-- [ ] Fix ESLint errors in `src/project-planner/App.tsx` (e.g., `rel="noopener"` for links).
 - [ ] Resolve any unused variable warnings.
 - [ ] Address React purity/hook issues (e.g., `useCallback` wraps).
 - [ ] Ensure all necessary dependencies are installed.
