@@ -26,7 +26,7 @@ const NAV_LINKS = [
   { label: 'Catering', to: '/catering' },
   { label: 'About', to: '/about' },
   { label: 'Contact', to: '/contact' },
-  { label: 'Planner', to: '/project-planner.html', external: true },
+  { label: 'Planner', to: '/planner', external: true },
 ];
 
 const scrollReveal = {
