@@ -109,6 +109,21 @@
   color: transparent;
   animation: nav-shimmer 2.8s linear infinite;
 }
+.nav-link-shimmer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: radial-gradient(circle, var(--lime) 0%, transparent 65%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.nav-link-shimmer:hover::after {
+  transform: scaleX(1);
+}
 
 @keyframes nav-shimmer {
   0% { background-position: 0% 50%; }

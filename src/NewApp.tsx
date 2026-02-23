@@ -267,7 +267,7 @@ const SignatureFavorites: React.FC = () => {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-between gap-6 flex-wrap">
           <div>
-            <p className="text-sm uppercase tracking-widest text-[color:var(--secondary)] font-semibold">Signature Favorites</p>
+            <p className="text-sm uppercase tracking-widest text-[color:var(--emerald)] font-semibold">Signature Favorites</p>
             <h2 className="mt-2 text-3xl md:text-4xl font-serif text-[color:var(--primary)] leading-tight">Crave-worthy Cajun Classics</h2>
           </div>
           <a href="/menu" className="text-sm font-semibold text-[color:var(--accent)] flex items-center gap-2">

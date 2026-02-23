@@ -27,3 +27,5 @@ dist-ssr
 .env*.local
 dist_old/
 .well-known/appspecific/com.chrome.devtools.json
+*_results.txt
+*.txt
