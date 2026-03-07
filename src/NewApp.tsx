@@ -1,5 +1,5 @@
 import React, { useMemo, useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, NavLink, Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import {
   Calendar,
@@ -993,8 +993,6 @@ const AppShell = () => {
         <Routes>
           <Route path="/" element={<HomeView />} />
           <Route path="/menu" element={<MenuView />} />
-          <Route path="/planner" element={<Navigate to="/" replace />} />
-          <Route path="/project-planner.html" element={<Navigate to="/" replace />} />
           <Route path="/reservations" element={<ReservationsView />} />
           <Route path="/order" element={<OrderView />} />
           <Route path="/catering" element={<CateringView />} />
