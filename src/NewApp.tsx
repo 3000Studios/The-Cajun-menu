@@ -993,8 +993,6 @@ const AppShell = () => {
         <Routes>
           <Route path="/" element={<HomeView />} />
           <Route path="/menu" element={<MenuView />} />
-          <Route path="/planner" element={<Navigate to="/" replace />} />
-          <Route path="/project-planner.html" element={<Navigate to="/" replace />} />
           <Route path="/reservations" element={<ReservationsView />} />
           <Route path="/order" element={<OrderView />} />
           <Route path="/catering" element={<CateringView />} />
