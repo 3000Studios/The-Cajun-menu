@@ -39,11 +39,6 @@ const GatorBobWidget: React.FC = () => {
   const [isMinimized, setIsMinimized] = useState(true);
   const [isDancing, setIsDancing] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
-  const isMounted = React.useSyncExternalStore(
-    () => () => { },
-    () => true,
-    () => false
-  );
   const chatEndRef = useRef<HTMLDivElement>(null);
   const minimizedRef = useRef(isMinimized);
   const notifyTimerRef = useRef<number | null>(null);
