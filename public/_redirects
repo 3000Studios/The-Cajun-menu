@@ -1,5 +1,2 @@
-# SPA fallback for Vite/React Router
-/planner / 302
-/project-planner.html / 302
-/project-planner/* / 302
+/planner /project-plan.html 200
 /* /index.html 200
