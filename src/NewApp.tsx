@@ -15,6 +15,7 @@ import {
   X,
 } from 'lucide-react';
 import { MENU_ITEMS } from './newConstants';
+import { MenuItem } from './newTypes';
 import ErrorBoundary from './components/ErrorBoundary';
 const GatorBobWidget = React.lazy(() => import('./components/GatorBobWidget'));
 
@@ -284,7 +285,14 @@ const QuickActions: React.FC = () => (
   </section>
 );
 const SignatureFavorites: React.FC = () => {
-  const highlights = MENU_ITEMS.filter((item) => item.isSignature).slice(0, 6);
+  const highlights: MenuItem[] = [];
+  for (const item of MENU_ITEMS) {
+    if (item.isSignature) {
+      highlights.push(item);
+      if (highlights.length === 6) break;
+    }
+  }
+
   return (
     <section className="py-12 md:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
