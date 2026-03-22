@@ -283,8 +283,20 @@ const QuickActions: React.FC = () => (
     </div>
   </section>
 );
+
+const SIGNATURE_HIGHLIGHTS = (() => {
+  const highlights = [];
+  for (let i = 0; i < MENU_ITEMS.length; i++) {
+    const item = MENU_ITEMS[i];
+    if (item.isSignature) {
+      highlights.push(item);
+      if (highlights.length === 6) break;
+    }
+  }
+  return highlights;
+})();
+
 const SignatureFavorites: React.FC = () => {
-  const highlights = MENU_ITEMS.filter((item) => item.isSignature).slice(0, 6);
   return (
     <section className="py-12 md:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -299,7 +311,7 @@ const SignatureFavorites: React.FC = () => {
         </div>
 
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {highlights.map((item) => (
+          {SIGNATURE_HIGHLIGHTS.map((item) => (
             <article
               key={item.id}
               className="group rounded-2xl border border-[color:var(--accent)] bg-[color:var(--card)] p-5 md:p-7 shadow-[0_0_24px_rgba(178,148,94,0.25)] transition-transform duration-300 hover:-translate-y-2 hover:shadow-[0_0_36px_rgba(178,148,94,0.45)]"
