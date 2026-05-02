@@ -635,10 +635,11 @@ const ReservationsView: React.FC = () => {
         throw new Error(data?.error || 'Reservation could not be processed.');
       }
 
-      const startDate = `${payload.date}T${payload.time}`;
-      const dtStart = new Date(startDate).toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
-      const dtEnd = new Date(new Date(startDate).getTime() + 60 * 60 * 1000).toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
-      const ics = `BEGIN:VCALENDAR\\nVERSION:2.0\\nPRODID:-//The Cajun Menu//Reservations//EN\\nBEGIN:VEVENT\\nDTSTART:${dtStart}\\nDTEND:${dtEnd}\\nSUMMARY:Reservation for ${payload.name}\\nLOCATION:The Cajun Menu, 140 Keith Dr, Canton, GA 30114\\nEND:VEVENT\\nEND:VCALENDAR`;
+      const date = new Date(`${payload.date}T${payload.time}`);
+      const dtStart = date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+      date.setTime(date.getTime() + 60 * 60 * 1000);
+      const dtEnd = date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+      const ics = `BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//The Cajun Menu//Reservations//EN\nBEGIN:VEVENT\nDTSTART:${dtStart}\nDTEND:${dtEnd}\nSUMMARY:Reservation for ${payload.name}\nLOCATION:The Cajun Menu, 140 Keith Dr, Canton, GA 30114\nEND:VEVENT\nEND:VCALENDAR`;
       setCalendarLink(`data:text/calendar;charset=utf-8,${encodeURIComponent(ics)}`);
 
       setStatus('success');
