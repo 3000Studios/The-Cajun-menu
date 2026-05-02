@@ -501,6 +501,13 @@ const HomeView: React.FC = () => (
   </main>
 );
 
+const SEAFOOD_REGEX = /(shrimp|crab|crawfish|oyster|seafood|boil|gumbo)/i;
+const VALID_CATEGORIES = new Set(['Appetizers', 'Salads', 'Desserts', 'Drinks', 'Po-Boys']);
+const MENU_ITEMS_WITH_SEARCH = MENU_ITEMS.map((item) => ({
+  ...item,
+  searchStr: `${item.name} ${item.description}`.toLowerCase(),
+}));
+
 const MenuView: React.FC = () => {
   const [category, setCategory] = useState('All');
   const [query, setQuery] = useState('');
@@ -510,7 +517,7 @@ const MenuView: React.FC = () => {
 
   const filtered = useMemo(() => {
     const q = query.toLowerCase();
-    return MENU_ITEMS.filter((item) => {
+    return MENU_ITEMS_WITH_SEARCH.filter((item) => {
       if (category === 'Signature' && !item.isSignature) return false;
       if (category === 'Appetizers' && item.category !== 'Appetizers') return false;
       if (category === 'Salads' && item.category !== 'Salads') return false;
@@ -518,13 +525,17 @@ const MenuView: React.FC = () => {
       if (category === 'Desserts' && item.category !== 'Desserts') return false;
       if (category === 'Drinks' && item.category !== 'Drinks') return false;
       if (category === 'Seafood') {
-        const seafoodRegex = /(shrimp|crab|crawfish|oyster|seafood|boil|gumbo)/i;
-        if (!seafoodRegex.test(`${item.name} ${item.description}`)) return false;
+        if (!SEAFOOD_REGEX.test(item.searchStr)) return false;
       }
-      if (category !== 'All' && category !== 'Signature' && category !== 'Seafood' && !['Appetizers', 'Salads', 'Desserts', 'Drinks', 'Po-Boys'].includes(category)) {
+      if (
+        category !== 'All' &&
+        category !== 'Signature' &&
+        category !== 'Seafood' &&
+        !VALID_CATEGORIES.has(category)
+      ) {
         return false;
       }
-      if (q && !`${item.name} ${item.description}`.toLowerCase().includes(q)) return false;
+      if (q && !item.searchStr.includes(q)) return false;
       return true;
     });
   }, [category, query]);
