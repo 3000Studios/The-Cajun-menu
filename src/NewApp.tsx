@@ -851,8 +851,48 @@ const HangingBeadLetter: React.FC<{ char: string; index: number }> = ({ char, in
         ))}
       </div>
       <div className={`char-pendant text-mg-${BEAD_COLORS[index % 3]} mt-[-10px]`}>{char}</div>
+  </div>
+);
+
+const PrivacyView: React.FC = () => (
+  <div className="min-h-screen pt-32 pb-20 px-6 md:px-12 max-w-4xl mx-auto">
+    <div className="prose prose-invert max-w-none">
+      <p className="text-mgGold font-black uppercase tracking-[0.35em] text-[11px]">Privacy Policy</p>
+      <h1 className="text-4xl md:text-6xl font-serif text-white">Privacy and data use</h1>
+      <p className="text-white/70 text-lg">
+        We collect only what is needed to answer reservations, contact requests, and site analytics.
+        Advertising partners may use cookies or similar technologies subject to their own policies.
+      </p>
+      <p className="text-white/70">
+        We do not sell personal information. If you contact us, we may retain the message, contact
+        details, and reservation notes for business operations and recordkeeping.
+      </p>
+      <p className="text-white/70">
+        Questions about this policy can be sent through the contact page.
+      </p>
     </div>
-  );
+  </div>
+);
+
+const TermsView: React.FC = () => (
+  <div className="min-h-screen pt-32 pb-20 px-6 md:px-12 max-w-4xl mx-auto">
+    <div className="prose prose-invert max-w-none">
+      <p className="text-mgGold font-black uppercase tracking-[0.35em] text-[11px]">Terms</p>
+      <h1 className="text-4xl md:text-6xl font-serif text-white">Terms of use</h1>
+      <p className="text-white/70 text-lg">
+        This site is provided to share restaurant information, accept reservations, and support
+        customer communication.
+      </p>
+      <p className="text-white/70">
+        Do not use the site to submit false reservations, spam, or abusive content. We may refuse
+        service or cancel submissions that appear fraudulent or unsafe.
+      </p>
+      <p className="text-white/70">
+        Menu items, hours, and pricing can change without notice.
+      </p>
+    </div>
+  </div>
+);
 };
 
 const Footer: React.FC = () => {
@@ -950,8 +990,8 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] font-black uppercase tracking-[0.6em] text-white/10 pt-12 border-t border-white/5">
           <span>© 2026 THE CAJUN MENU • LOUISIANA TRADITION</span>
           <div className="flex gap-12">
-            <a href="#" className="hover:text-white transition-colors">Privacy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms</a>
+            <a href="/privacy" className="hover:text-white transition-colors">Privacy</a>
+            <a href="/terms" className="hover:text-white transition-colors">Terms</a>
             <a href="#" className="hover:text-white transition-colors">Accessibility</a>
           </div>
         </div>
@@ -998,6 +1038,8 @@ const AppShell = () => {
           <Route path="/catering" element={<CateringView />} />
           <Route path="/about" element={<AboutView />} />
           <Route path="/contact" element={<ContactView />} />
+          <Route path="/privacy" element={<PrivacyView />} />
+          <Route path="/terms" element={<TermsView />} />
           <Route path="/admin" element={<AdminView />} />
         </Routes>
       </AnimatePresence>

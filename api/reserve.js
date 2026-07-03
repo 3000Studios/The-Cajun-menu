@@ -45,7 +45,7 @@ export default async function handler(req, res) {
 VERSION:2.0
 PRODID:-//The Cajun Menu//Reservations//EN
 BEGIN:VEVENT
-UID:${Date.now()}@thecajunmenu.online
+UID:${Date.now()}@thecajunmenu.site
 DTSTAMP:${startDateTime}
 DTSTART:${startDateTime}
 DTEND:${endDateTime}
