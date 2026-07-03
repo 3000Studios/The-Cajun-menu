@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@google/genai": "^1.38.0",
-    "framer-motion": "^11.3.9",
+    "framer-motion": "^12.42.2",
     "lucide-react": "^0.473.0",
     "nodemailer": "^7.0.12",
     "react": "^19.2.0",
