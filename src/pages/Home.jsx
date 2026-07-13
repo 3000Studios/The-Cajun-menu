@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useMemo } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import {
   X,
@@ -382,13 +382,17 @@ const buildParticles = () =>
     left: Math.random() * 100,
   }));
 
+const signatureDishes = MENU_ITEMS.filter((item) => item.isSignature);
+
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState(MENU_CATEGORIES[0]);
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.05]);
 
-  const filteredItems = MENU_ITEMS.filter((item) => item.category === selectedCategory);
-  const signatureDishes = MENU_ITEMS.filter((item) => item.isSignature);
+  const filteredItems = useMemo(
+    () => MENU_ITEMS.filter((item) => item.category === selectedCategory),
+    [selectedCategory],
+  );
   const [particles] = useState(buildParticles);
 
   useEffect(() => {
