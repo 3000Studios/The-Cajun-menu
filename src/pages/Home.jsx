@@ -168,6 +168,7 @@ const Navbar = () => {
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
     const container = document.body;
+    const fragment = document.createDocumentFragment();
 
     for (let i = 0; i < 30; i += 1) {
       const bead = document.createElement('div');
@@ -180,7 +181,7 @@ const Navbar = () => {
       bead.style.setProperty('--tx', `${tx}px`);
       bead.style.setProperty('--ty', `${ty}px`);
       bead.style.animation = `dropExplosion ${1 + Math.random()}s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards`;
-      container.appendChild(bead);
+      fragment.appendChild(bead);
       setTimeout(() => bead.remove(), 2000);
     }
 
@@ -195,9 +196,11 @@ const Navbar = () => {
       confetti.style.setProperty('--tx', `${tx}px`);
       confetti.style.setProperty('--ty', `${ty}px`);
       confetti.style.animation = `dropExplosion ${0.5 + Math.random()}s linear forwards`;
-      container.appendChild(confetti);
+      fragment.appendChild(confetti);
       setTimeout(() => confetti.remove(), 1500);
     }
+
+    container.appendChild(fragment);
   };
 
   return (
