@@ -10,3 +10,9 @@
 
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
+
+/images/*
+  Cache-Control: public, max-age=2592000
+
+/videos/*
+  Cache-Control: public, max-age=2592000

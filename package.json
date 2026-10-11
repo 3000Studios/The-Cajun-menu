@@ -23,15 +23,12 @@
     "validate": "npm run lint && npm run typecheck && npm run build"
   },
   "dependencies": {
-    "@google/genai": "^1.38.0",
     "framer-motion": "^11.3.9",
     "lucide-react": "^0.473.0",
     "nodemailer": "^7.0.12",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.13.0",
-    "recharts": "^3.7.0",
-    "set-cookie-parser": "^3.0.1",
     "twilio": "^5.11.1"
   },
   "devDependencies": {
