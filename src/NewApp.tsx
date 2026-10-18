@@ -24,6 +24,9 @@ const NAV_LINKS = [
   { label: 'Reservations', to: '/reservations' },
   { label: 'Order', to: '/order' },
   { label: 'Catering', to: '/catering' },
+  { label: 'Gumbo Guide', to: '/guides/gumbo' },
+  { label: 'Holy Trinity', to: '/guides/holy-trinity' },
+  { label: 'Crawfish Boil', to: '/guides/crawfish-boil' },
   { label: 'About', to: '/about' },
   { label: 'Contact', to: '/contact' },
   { label: 'Planner', to: '/planner', external: true },
@@ -742,24 +745,285 @@ const CateringView: React.FC = () => (
   </section>
 );
 
+const GumboGuideView: React.FC = () => (
+  <section className="pt-24 md:pt-28 pb-12 md:pb-16">
+    <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-10">
+      <div>
+        <p className="text-mgGold font-black uppercase tracking-[0.35em] text-[11px]">Guide</p>
+        <h1 className="text-4xl md:text-6xl font-serif text-[color:var(--primary)]">Gumbo, Start to Finish</h1>
+        <p className="mt-3 text-[color:var(--text)]">
+          Gumbo is less a recipe than a method: a roux, the holy trinity, a good stock, and the patience to let
+          them become something bigger than the sum of their parts. Here is the whole arc, the way it is taught
+          in Louisiana home kitchens.
+        </p>
+      </div>
+      <div className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--card)] p-6 space-y-4">
+        <h3 className="text-xl font-serif text-[color:var(--primary)]">It starts with the roux — and only the roux</h3>
+        <p className="text-[color:var(--text)]">
+          A roux is equal parts flour and fat, cooked together until the flour toasts. That is the entire
+          ingredient list, and it still manages to be the most argued-over step in Cajun cooking. The fat can be
+          oil, butter, lard, or rendered poultry fat; the flour is plain all-purpose. What matters is the color
+          you take it to, because color is flavor. A blond roux, cooked a few minutes, thickens well and tastes
+          mild. A peanut-butter roux brings nuttiness. A dark roux — the color of an old copper penny or milk
+          chocolate — is the soul of a classic chicken-and-sausage gumbo: deeply toasty, almost smoky, and
+          noticeably thinner as a thickener, because the longer flour cooks, the less thickening power it keeps.
+        </p>
+        <p className="text-[color:var(--text)]">
+          The discipline is simple and non-negotiable: stir constantly, scrape the corners, and never walk away.
+          A dark roux can take anywhere from twenty minutes to the better part of an hour depending on heat, and
+          it can burn in the time it takes to answer a text. Specks of black mean it is scorched, and a scorched
+          roux cannot be saved — throw it out and start again. Every Louisiana cook has done this. It is tuition.
+        </p>
+        <h3 className="text-xl font-serif text-[color:var(--primary)]">The trinity goes in, and the sizzle settles it</h3>
+        <p className="text-[color:var(--text)]">
+          When the roux reaches your color, the chopped holy trinity — onion, bell pepper, and celery — goes
+          straight in. This does two jobs at once: it stops the roux from cooking further by cooling the pot,
+          and it starts building the aromatic base. Cook the vegetables in the roux until the onions soften and
+          the raw edge comes off, then add garlic for the last minute or so; garlic burns fast and bitter, which
+          is why it never goes in first.
+        </p>
+        <h3 className="text-xl font-serif text-[color:var(--primary)]">Stock, slowly</h3>
+        <p className="text-[color:var(--text)]">
+          Add warm stock a ladle at a time, stirring as you go, so the roux absorbs the liquid smoothly instead
+          of seizing into lumps. Chicken stock for a chicken-and-sausage gumbo; seafood stock for a seafood
+          gumbo. Once it is all in and simmering, skim the fat that rises if you want a cleaner finish. Then
+          season in layers: salt, black pepper, cayenne, bay leaves, thyme. A gumbo should taste slightly
+          under-seasoned at this stage, because it is about to simmer down and concentrate.
+        </p>
+        <h3 className="text-xl font-serif text-[color:var(--primary)]">Proteins, timing, and the long simmer</h3>
+        <p className="text-[color:var(--text)]">
+          Brown your sausage and chicken before they ever meet the pot — that fond is flavor the gumbo cannot
+          get any other way — and add them after the stock. Then let it simmer low and slow, at least an hour,
+          longer if you have it. Seafood gumbo plays by different rules: shrimp and crab go in near the very end,
+          because seafood overcooks in minutes while the base needs the hour. Okra, when you use it, is both an
+          ingredient and a thickener; some cooks sauté it separately first to tame its texture. Filé powder —
+          ground sassafras leaves — is the other traditional thickener, and it belongs at the table, stirred into
+          individual bowls off the heat, never boiled, which turns it stringy.
+        </p>
+        <h3 className="text-xl font-serif text-[color:var(--primary)]">Serving and second-day truth</h3>
+        <p className="text-[color:var(--text)]">
+          Serve over a scoop of white rice — in the bowl first or alongside, depending on family law — with
+          green onions on top and hot sauce on the table. And know this: gumbo is famously better the next day,
+          after a night in the refrigerator lets the flavors marry. Make more than you need. Everybody does.
+        </p>
+        <h3 className="text-xl font-serif text-[color:var(--primary)]">Three mistakes that flatten a gumbo</h3>
+        <p className="text-[color:var(--text)]">
+          The first is impatience at the simmer. A gumbo pulled off the heat after twenty minutes tastes like
+          seasoned stock with things in it; the roux has not yet married the broth, and the whole pot reads thin
+          and separate. Give it the hour. The second is seasoning only at the end. Salt and pepper added in
+          layers — a little with the trinity, a little after the stock, a correction at the finish — build a
+          depth that a final heavy hand cannot imitate, because late seasoning sits on top of the dish instead
+          of inside it. The third is boiling the filé. Filé goes in off the heat, at the table, bowl by bowl;
+          boiled, it turns a proud gumbo ropey and stringy, which is the one texture nobody at the table asked
+          for. None of these mistakes requires talent to avoid. They require only that the cook respect what
+          gumbo is: a slow dish that rewards the patient and politely exposes everyone else.
+        </p>
+      </div>
+    </div>
+  </section>
+);
+
+const HolyTrinityGuideView: React.FC = () => (
+  <section className="pt-24 md:pt-28 pb-12 md:pb-16">
+    <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-10">
+      <div>
+        <p className="text-mgGold font-black uppercase tracking-[0.35em] text-[11px]">Guide</p>
+        <h1 className="text-4xl md:text-6xl font-serif text-[color:var(--primary)]">The Holy Trinity of Cajun Cooking</h1>
+        <p className="mt-3 text-[color:var(--text)]">
+          Before the roux darkens, before the stock simmers, almost every savory Cajun dish begins the same way:
+          onion, bell pepper, and celery, chopped and sweated in fat. This trio is the holy trinity, and
+          understanding it means understanding the flavor foundation of the whole cuisine.
+        </p>
+      </div>
+      <div className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--card)] p-6 space-y-4">
+        <h3 className="text-xl font-serif text-[color:var(--primary)]">Three vegetables, one job</h3>
+        <p className="text-[color:var(--text)]">
+          The trinity is Cajun cooking's answer to the French mirepoix — onion, carrot, and celery — adapted to
+          what grew in Louisiana. Carrots, which sweeten a base, gave up their seat to bell pepper, which brings
+          a grassy, slightly bitter depth that stands up to cayenne, smoke, and long simmers. The classic working
+          ratio is roughly two parts onion to one part bell pepper and one part celery, though plenty of cooks
+          go equal parts and nobody is wrong. What matters is the balance of roles: onion for sweetness and body,
+          bell pepper for the signature Cajun backbone, celery for a clean, herbal finish that keeps rich dishes
+          from tasting flat.
+        </p>
+        <h3 className="text-xl font-serif text-[color:var(--primary)]">Why the name — and who the pope is</h3>
+        <p className="text-[color:var(--text)]">
+          The name is a Louisiana wink at the Catholic heritage of the region: three-in-one, like the doctrine.
+          And the tradition has a fourth figure — garlic, so often added to the trio that cooks call it "the
+          pope." Green onions and parsley, scattered over finished dishes, round out the supporting cast. Once
+          you see the pattern, you see it everywhere: jambalaya starts with the trinity, étouffée starts with
+          the trinity, gumbo's trinity goes straight into the roux, and a pot of red beans is unthinkable
+          without it.
+        </p>
+        <h3 className="text-xl font-serif text-[color:var(--primary)]">Technique: the chop and the sweat</h3>
+        <p className="text-[color:var(--text)]">
+          Chop the three vegetables to a similar, fairly fine dice so they cook at the same rate and melt into
+          the dish rather than announcing themselves as chunks. Then cook them low and slow in fat — oil, butter,
+          bacon drippings, or a fresh roux — until the onions go translucent and sweet and the pepper and celery
+          surrender their crunch. This step, called sweating, is not browning: you are coaxing out moisture and
+          sugars, not searing. Rushing it over high heat leaves the base raw-tasting no matter how long the
+          dish simmers afterward. Budget ten unhurried minutes here; it is the cheapest flavor in the whole pot.
+        </p>
+        <h3 className="text-xl font-serif text-[color:var(--primary)]">Variations worth knowing</h3>
+        <p className="text-[color:var(--text)]">
+          Green bell pepper is traditional, but red and yellow peppers sneak sweetness in when a dish wants it,
+          and poblano brings a deeper, earthier note some modern cooks love. Celery leaves, too often thrown
+          away, are concentrated celery flavor — chop them in with the stalks. If you are cooking for someone
+          who swears they hate celery, dice it finer; cooked down in the trinity it disappears as an ingredient
+          and remains only as depth. And if your pepper is enormous or your onions are small, trust the ratio by
+          volume in the cutting board pile rather than a count of vegetables — the trinity is a proportion, not
+          a headcount.
+        </p>
+        <h3 className="text-xl font-serif text-[color:var(--primary)]">The freezer trick every Louisiana kitchen knows</h3>
+        <p className="text-[color:var(--text)]">
+          Trinity freezes beautifully. Chop a big batch, freeze it flat in bags, and weeknight cooking changes:
+          a gumbo, a pot of beans, or a shrimp creole can start in the time it takes the vegetables to hit hot
+          fat. Many Louisiana grocery stores sell the mix pre-chopped, fresh and frozen, which tells you
+          everything about how foundational it is — it is not a garnish or a variation. It is square one.
+        </p>
+        <h3 className="text-xl font-serif text-[color:var(--primary)]">How the trinity shifts from dish to dish</h3>
+        <p className="text-[color:var(--text)]">
+          The trio stays constant; its handling doesn't. In gumbo, the trinity goes into a hot roux and takes on
+          that toasted depth — the vegetables nearly dissolve over the long simmer and become body as much as
+          flavor. In étouffée, where the sauce is butter-based and the cooking is shorter, the dice is finer and
+          the vegetables stay distinct enough to give the finished dish its texture. Jambalaya cooks its trinity
+          with the sausage and then the rice in the same pot, so the vegetables season the grains from inside as
+          everything steams together. Red beans get their trinity sweated in drippings before the beans and
+          ham go in, and by the end of the long cook the vegetables have vanished into the creaminess entirely.
+          Same three vegetables, four different jobs — which is exactly why Louisiana cooks treat the trinity as
+          a technique to learn once and apply forever, rather than an ingredient line to measure and forget.
+        </p>
+        <p className="text-[color:var(--text)]">
+          One last practical note: prep the trinity before anything else touches heat. Cajun cooking moves in
+          stages — roux darkening, meat browning, stock coming up — and several of those stages punish a cook
+          who has to stop and chop. A bowl of trinity, cut and waiting beside the stove, is the difference
+          between a calm pot and a scorched one. Mise en place sounds French and fancy; in a Louisiana kitchen
+          it's just called being ready.
+        </p>
+      </div>
+    </div>
+  </section>
+);
+
+const CrawfishBoilGuideView: React.FC = () => (
+  <section className="pt-24 md:pt-28 pb-12 md:pb-16">
+    <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-10">
+      <div>
+        <p className="text-mgGold font-black uppercase tracking-[0.35em] text-[11px]">Guide</p>
+        <h1 className="text-4xl md:text-6xl font-serif text-[color:var(--primary)]">How a Crawfish Boil Actually Works</h1>
+        <p className="mt-3 text-[color:var(--text)]">
+          A crawfish boil is part recipe, part social institution: one pot, a table covered in newspaper, and a
+          crowd that peels, eats, and argues about seasoning for hours. If you have never run one, here is the
+          honest sequence — including the step most of the flavor actually comes from.
+        </p>
+      </div>
+      <div className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--card)] p-6 space-y-4">
+        <h3 className="text-xl font-serif text-[color:var(--primary)]">Start with live crawfish, and purge them</h3>
+        <p className="text-[color:var(--text)]">
+          Crawfish are bought live, by the sack, during the season that runs roughly from late winter through
+          early summer. Before cooking, they get purged: rinsed in clean water, with the water changed until it
+          runs reasonably clear, so the mud and grit from the ponds wash out. Keep them cool and damp while they
+          wait, never sealed in an airtight container, and cook them the day you buy them. Any that are dead
+          before the pot — the ones whose tails stay straight and limp — get tossed, not cooked.
+        </p>
+        <h3 className="text-xl font-serif text-[color:var(--primary)]">The pot, the basket, and the seasoned water</h3>
+        <p className="text-[color:var(--text)]">
+          A boil runs in a big outdoor pot — commonly 60 to 100 quarts — over a propane burner, with a strainer
+          basket that lifts the food out of the water. The water is the seasoning delivery system: a generous
+          dose of crab boil seasoning (dry, liquid, or both), salt, lemons halved and squeezed in, heads of
+          garlic cut in half, and onions. The water should taste aggressively seasoned — saltier and spicier
+          than you think it should — because the crawfish spend only a short time in it and carry just a film of
+          it into the shell. Season the water like you mean it; you can always serve seasoning on the side, but
+          you cannot season a crawfish that has already been peeled.
+        </p>
+        <h3 className="text-xl font-serif text-[color:var(--primary)]">The fixings go in by cooking time, not all at once</h3>
+        <p className="text-[color:var(--text)]">
+          Everything in the pot cooks on its own clock. Small red potatoes and corn on the cob take the longest
+          and go in early; smoked sausage joins them; mushrooms and other sturdy additions follow. The crawfish
+          themselves go in last, into water at a rolling boil, and they cook fast — a few minutes at the boil is
+          all they need before the heat comes off. Overcooked crawfish are rubbery and their tails tear when you
+          peel them; timing the additions so everything finishes together is the boil-master's real skill.
+        </p>
+        <h3 className="text-xl font-serif text-[color:var(--primary)]">The soak: where the flavor actually happens</h3>
+        <p className="text-[color:var(--text)]">
+          Here is the step outsiders miss. When the crawfish have had their brief boil, the burner goes off and
+          the pot sits — the soak. For the next stretch, commonly fifteen to thirty minutes, the crawfish rest in
+          the hot, seasoned water and drink it in as they cool slightly. This soak, far more than the boil
+          itself, decides how flavorful and juicy the tails are and how much spice the shells carry to your
+          fingers. Some cooks chill the pot's exterior or add ice to stop the cooking while extending the soak.
+          However it is managed, do not skip it: a dumped-too-early boil tastes like it was seasoned by rumor.
+        </p>
+        <h3 className="text-xl font-serif text-[color:var(--primary)]">The dump, the peel, and the etiquette</h3>
+        <p className="text-[color:var(--text)]">
+          The basket drains, then the whole boil is dumped straight onto a newspaper- or paper-covered table —
+          no plates required, though trays help. Peeling is its own small craft: pinch the tail, twist it from
+          the head, peel the first ring or two of shell, and pull the meat out in one piece. Sucking the head,
+          where the seasoned fat lives, is traditional and entirely up to you. Pace yourself, keep a drink
+          within reach, and know that the second batch out of the pot — seasoned by a soak in water the first
+          batch already enriched — is often the best one. That is not an accident. That is the institution
+          working as designed.
+        </p>
+        <h3 className="text-xl font-serif text-[color:var(--primary)]">Leftovers: the boil's second act</h3>
+        <p className="text-[color:var(--text)]">
+          An experienced boil host cooks more than the table can eat on purpose, because leftover crawfish are
+          an ingredient, not a problem. Peeled tails become tomorrow's étouffée, crawfish pie, or a cream sauce
+          over pasta; the shells and heads simmer into a rich stock that freezes well and upgrades the next
+          pot of gumbo or bisque. Leftover corn and potatoes from the boil — already saturated with seasoning —
+          fry up into a breakfast hash that regulars quietly consider the best meal of the whole weekend. Peel
+          what you can the same night, refrigerate the tails promptly, and freeze anything you won't use within
+          a couple of days. The boil feeds people twice. That, too, is the institution working as designed.
+        </p>
+        <p className="text-[color:var(--text)]">
+          If you're hosting your first boil, borrow confidence from the format itself: one pot, one table,
+          paper down, drinks cold, and nowhere for anyone to be but present. The boil forgives beginners
+          because its pleasures are structural — hot food, shared work, and time around a table. Get the purge
+          right, season the water boldly, respect the soak, and the rest takes care of itself.
+        </p>
+      </div>
+    </div>
+  </section>
+);
+
 const AboutView: React.FC = () => (
   <section className="pt-24 md:pt-28 pb-12 md:pb-16">
     <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-10">
       <div>
         <h1 className="text-4xl md:text-6xl font-serif text-[color:var(--primary)]">Our Story</h1>
         <p className="mt-3 text-[color:var(--text)]">
-          We’re a family-run kitchen bringing the soul of Louisiana to Canton—bold flavors, warm hospitality, and a table
-          ready for your next celebration.
+          We're a family-run kitchen bringing the soul of Louisiana to Canton — bold flavors, warm hospitality,
+          and a table ready for your next celebration.
+        </p>
+        <p className="mt-3 text-[color:var(--text)]">
+          The Cajun Menu exists for a simple reason: the food we grew up on deserves to be cooked the slow way
+          and shared generously. Cajun cooking is working-people's food from the bayous and prairies of
+          Louisiana — one-pot, deeply seasoned, built on a roux, the holy trinity of onion, bell pepper, and
+          celery, and whatever the season and the water provided. It is not fancy food. It is food with a memory,
+          and we cook it that way on purpose.
         </p>
       </div>
       <div className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--card)] p-6">
         <h3 className="text-xl font-serif text-[color:var(--primary)]">Chef Spotlight</h3>
-        <p className="mt-2 text-[color:var(--text)]">Hand-stirred roux, slow-simmered classics, and modern Cajun flair.</p>
+        <p className="mt-2 text-[color:var(--text)]">
+          Hand-stirred roux, slow-simmered classics, and modern Cajun flair. Our kitchen treats the roux with
+          the respect it demands — stirred constantly, taken to its proper color, never rushed and never walked
+          away from — because everything downstream of it, from gumbo to étouffée, is only as good as that
+          foundation. From there it is patience: stocks that simmer, beans that take their time, and seasoning
+          built in layers instead of dumped in at the end.
+        </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {Array.from({ length: 3 }).map((_, i) => (
-          <div key={i} className="aspect-[4/3] rounded-2xl border border-[color:var(--border)] bg-[color:var(--card)]" />
-        ))}
+      <div className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--card)] p-6">
+        <h3 className="text-xl font-serif text-[color:var(--primary)]">What you'll find here</h3>
+        <p className="mt-2 text-[color:var(--text)]">
+          This site is the front door to the kitchen. Browse the menu to see what we're serving, use the
+          reservations page to book a table, order ahead for pickup or delivery, or talk to us about catering
+          when the celebration is yours to host. We also publish guides — how gumbo actually works, what the
+          holy trinity is, how a crawfish boil runs — because this food comes with stories and technique worth
+          passing on, and because we would rather you understand what you're eating.
+        </p>
+        <p className="mt-2 text-[color:var(--text)]">
+          Whether it's your first bowl of gumbo or your five-hundredth, you're welcome at the table. That's not
+          a slogan. In Louisiana, feeding people is how you say everything else.
+        </p>
       </div>
     </div>
   </section>
@@ -772,6 +1036,28 @@ const ContactView: React.FC = () => (
         <h1 className="text-4xl md:text-6xl font-serif text-[color:var(--primary)]">Contact & Location</h1>
         <p className="text-[color:var(--text)]">140 Keith Dr, Canton, GA 30114</p>
         <a className="text-[color:var(--accent)]" href="tel:6788997404">(678) 899-7404</a>
+        <p className="text-[color:var(--text)]">
+          The fastest way to reach us for anything time-sensitive — tonight's reservation, a change to an
+          order, a catering date you need held — is by phone. For everything else, the form on this page works
+          well: tell us what you need, leave an email we can actually reach, and we'll get back to you.
+        </p>
+        <p className="text-[color:var(--text)]">
+          Planning something bigger? Catering questions are easier with a few details up front: the date, the
+          approximate headcount, and whether you're thinking a full crawfish boil, a gumbo-and-fixings spread,
+          or something custom. Send what you know; we'll help you figure out the rest.
+        </p>
+        <p className="text-[color:var(--text)]">
+          Found something wrong on this site — a price that doesn't match the menu board, a page that won't
+          load, a typo in a guide? Tell us through the form and we'll fix it. Reader corrections keep this site
+          honest, and we appreciate every one.
+        </p>
+        <p className="text-[color:var(--text)]">
+          Booking the space or planning a private event? Call the number above and ask about dates — large
+          parties and full crawfish boils take a little lead time to do right, and we'd rather plan yours
+          properly than squeeze it in. Gift questions, donation requests for local fundraisers, and press
+          inquiries can all start with the form as well; just say so in the first line of your message so it
+          lands with the right person.
+        </p>
       </div>
       <div className="md:col-span-6">
         <form className="space-y-4 rounded-2xl border border-[color:var(--border)] bg-[color:var(--card)] p-6">
@@ -852,7 +1138,8 @@ const HangingBeadLetter: React.FC<{ char: string; index: number }> = ({ char, in
       </div>
       <div className={`char-pendant text-mg-${BEAD_COLORS[index % 3]} mt-[-10px]`}>{char}</div>
   </div>
-);
+  );
+};
 
 const PrivacyView: React.FC = () => (
   <div className="min-h-screen pt-32 pb-20 px-6 md:px-12 max-w-4xl mx-auto">
@@ -860,15 +1147,48 @@ const PrivacyView: React.FC = () => (
       <p className="text-mgGold font-black uppercase tracking-[0.35em] text-[11px]">Privacy Policy</p>
       <h1 className="text-4xl md:text-6xl font-serif text-white">Privacy and data use</h1>
       <p className="text-white/70 text-lg">
-        We collect only what is needed to answer reservations, contact requests, and site analytics.
-        Advertising partners may use cookies or similar technologies subject to their own policies.
+        This policy explains what information The Cajun Menu collects through this website, how we use it, and
+        the choices you have. We collect only what is needed to answer reservations, contact requests, and
+        catering inquiries, and to understand how the site is used.
       </p>
+      <h2 className="text-white font-serif">What we collect</h2>
       <p className="text-white/70">
-        We do not sell personal information. If you contact us, we may retain the message, contact
-        details, and reservation notes for business operations and recordkeeping.
+        When you submit the contact form or a reservation request, we collect the details you provide — your
+        name, email address or phone number, and the contents of your message, including reservation notes such
+        as party size and date. Like most websites, we also receive standard technical information when you
+        visit, such as your browser type, device type, pages viewed, and approximate location derived from your
+        IP address, through analytics tooling.
       </p>
+      <h2 className="text-white font-serif">How we use it</h2>
       <p className="text-white/70">
-        Questions about this policy can be sent through the contact page.
+        We use the information you send us to respond to you, manage your reservation or catering inquiry, and
+        keep business records of those communications. We use aggregate site analytics to see which pages and
+        guides are useful and to fix problems. We do not sell personal information, and we do not share it with
+        third parties for their own marketing.
+      </p>
+      <h2 className="text-white font-serif">Cookies and advertising</h2>
+      <p className="text-white/70">
+        This site may display advertising served by Google AdSense. Google and its partners use cookies and
+        similar technologies to serve ads based on your prior visits to this and other websites, and to measure
+        how ads perform. Google's use of advertising cookies enables it and its partners to serve ads to you
+        based on your visits to this site and/or other sites on the internet. You may opt out of personalized
+        advertising by visiting Google Ads Settings (https://www.google.com/settings/ads), and you can opt out
+        of cookie use by many third-party vendors at the Digital Advertising Alliance opt-out page
+        (https://optout.aboutads.info). You can also block or delete cookies in your browser settings; the site
+        will still work, though some features may behave differently. Read more about how Google uses data from
+        sites that use its services at https://policies.google.com/technologies/partner-sites.
+      </p>
+      <h2 className="text-white font-serif">Your choices</h2>
+      <p className="text-white/70">
+        You may ask us what personal information we hold about you from your form submissions, ask us to
+        correct it, or ask us to delete it. Send the request through the contact page or call us at
+        (678) 899-7404, and we will respond as required by applicable law. This site is not directed to children
+        under 13, and we do not knowingly collect their information.
+      </p>
+      <h2 className="text-white font-serif">Changes and questions</h2>
+      <p className="text-white/70">
+        We may update this policy as the site changes; the current version will always be posted on this page.
+        Questions about this policy can be sent through the contact page or by phone at (678) 899-7404.
       </p>
     </div>
   </div>
@@ -880,20 +1200,46 @@ const TermsView: React.FC = () => (
       <p className="text-mgGold font-black uppercase tracking-[0.35em] text-[11px]">Terms</p>
       <h1 className="text-4xl md:text-6xl font-serif text-white">Terms of use</h1>
       <p className="text-white/70 text-lg">
-        This site is provided to share restaurant information, accept reservations, and support
-        customer communication.
+        This site is provided to share restaurant information, publish cooking guides, accept reservations, and
+        support customer communication. By using it, you agree to these terms.
       </p>
+      <h2 className="text-white font-serif">Information on this site</h2>
       <p className="text-white/70">
-        Do not use the site to submit false reservations, spam, or abusive content. We may refuse
-        service or cancel submissions that appear fraudulent or unsafe.
+        We work to keep menus, prices, and guides accurate, but menu items, hours, and pricing can change
+        without notice, and the menu board at the restaurant controls if anything here disagrees with it.
+        Cooking guides are offered for general information and home enjoyment; follow standard food-safety
+        practice when cooking, especially with seafood.
       </p>
+      <h2 className="text-white font-serif">Acceptable use</h2>
       <p className="text-white/70">
-        Menu items, hours, and pricing can change without notice.
+        Do not use the site to submit false reservations, spam, or abusive content, or to interfere with the
+        site's operation. We may refuse service or cancel submissions that appear fraudulent or unsafe.
+        Reservations made through the site are requests until confirmed by us.
+      </p>
+      <h2 className="text-white font-serif">Our content</h2>
+      <p className="text-white/70">
+        The text, guides, and design of this site belong to The Cajun Menu or its contributors. You're welcome
+        to link to our pages and quote brief excerpts with credit; republishing whole guides or using the
+        site's content commercially requires our permission. Third-party names and trademarks mentioned in
+        guides belong to their owners.
+      </p>
+      <h2 className="text-white font-serif">Liability and changes</h2>
+      <p className="text-white/70">
+        The site is provided as is, without warranties of any kind, and to the extent allowed by law we are not
+        liable for indirect damages arising from its use. We may update these terms from time to time; the
+        current version will always be posted on this page, and continuing to use the site after a change means
+        you accept the updated terms. Questions about these terms can be sent through the contact page.
+      </p>
+      <h2 className="text-white font-serif">Reservations, orders, and catering</h2>
+      <p className="text-white/70">
+        Submitting a reservation, order, or catering inquiry through this site creates a request, not a
+        confirmed booking, until we confirm it with you directly. Please give accurate contact information —
+        if we cannot reach you to confirm, we may release the table or date. For catering, quoted prices are
+        estimates based on the details you provide and are finalized once the menu and headcount are agreed.
       </p>
     </div>
   </div>
 );
-};
 
 const Footer: React.FC = () => {
   const navigate = useNavigate();
@@ -1036,6 +1382,9 @@ const AppShell = () => {
           <Route path="/reservations" element={<ReservationsView />} />
           <Route path="/order" element={<OrderView />} />
           <Route path="/catering" element={<CateringView />} />
+          <Route path="/guides/gumbo" element={<GumboGuideView />} />
+          <Route path="/guides/holy-trinity" element={<HolyTrinityGuideView />} />
+          <Route path="/guides/crawfish-boil" element={<CrawfishBoilGuideView />} />
           <Route path="/about" element={<AboutView />} />
           <Route path="/contact" element={<ContactView />} />
           <Route path="/privacy" element={<PrivacyView />} />
