@@ -1,3 +1,6 @@
+# Planner SPA
+/planner /project-planner.html 200
+
 # SPA fallback for Vite/React Router
 /planner /project-plan.html 200
 /* /index.html 200
