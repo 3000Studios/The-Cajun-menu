@@ -660,6 +660,20 @@ const ReservationsView: React.FC = () => {
           <h1 className="text-4xl md:text-6xl font-serif text-[color:var(--primary)]">Reserve in Seconds</h1>
           <p className="text-[color:var(--text)]">Choose your time. Get instant confirmation. We’ll see you soon.</p>
           <p className="text-sm text-[color:var(--muted)]">For parties of 8+, call us.</p>
+          <h2 className="text-2xl font-serif text-[color:var(--primary)] pt-4">How it works</h2>
+          <p className="text-[color:var(--text)]">
+            1. Pick your date, time, and party size in the form. 2. Submit — your reservation is confirmed instantly,
+            with a confirmation on its way to your email. 3. Add it to your calendar straight from the confirmation
+            screen, and we will have your table ready when you arrive.
+          </p>
+          <h2 className="text-2xl font-serif text-[color:var(--primary)] pt-4">Good to know</h2>
+          <p className="text-[color:var(--text)]">
+            We are open Wednesday through Saturday, 11:00 AM to 8:00 PM, and Sunday, 12:00 PM to 5:00 PM (closed
+            Monday and Tuesday). For parties of 8 or more, call us at +1-678-899-7404 so we can set the room up for
+            your group. Use the Notes field in the form for birthdays, anniversaries, high chairs, or anything else
+            the team should know before you sit down. Running late or need to change your plans? Call us and we
+            will do our best to hold your table.
+          </p>
         </div>
         <div className="md:col-span-6">
           <div className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--card)] p-6">
@@ -712,6 +726,35 @@ const OrderView: React.FC = () => (
             </button>
           </div>
         ))}
+      </div>
+      <div className="mt-12 text-left max-w-4xl mx-auto space-y-8">
+        <div>
+          <h2 className="text-2xl font-serif text-[color:var(--primary)]">How ordering works</h2>
+          <p className="mt-2 text-[color:var(--text)]">
+            Browse the <a href="/menu" className="font-semibold text-[color:var(--accent)]">full menu</a> — appetizers,
+            salads, main courses, po-boys, baskets, a kids menu, desserts, sides, and drinks — then start a pickup or
+            delivery order above. Pickup orders are collected at the restaurant, 140 Keith Dr, Canton, GA 30114.
+            Feeding a crowd instead? See <a href="/catering" className="font-semibold text-[color:var(--accent)]">Catering &amp; Events</a>.
+          </p>
+        </div>
+        <div>
+          <h2 className="text-2xl font-serif text-[color:var(--primary)]">Most ordered</h2>
+          <p className="mt-2 text-[color:var(--text)]">
+            The Cajun Sampler Platter ($21.99) is the tour of the bayou: red beans and rice, crawfish etouffee, and
+            our famous seafood gumbo. The Seafood Gumbo Bowl ($16.99) pairs Gulf shrimp, blue crab, and andouille in
+            a deep, dark roux. Shrimp &amp; Grits Royale ($23.99), the Debris Roast Beef Po-Boy ($19.99), and the
+            King’s Crab Boil ($52.99) round out the regulars’ list — and Traditional Beignets ($9.99) finish just
+            about every order.
+          </p>
+        </div>
+        <div>
+          <h2 className="text-2xl font-serif text-[color:var(--primary)]">Good to know</h2>
+          <p className="mt-2 text-[color:var(--text)]">
+            Kitchen hours: Wednesday through Saturday, 11:00 AM to 8:00 PM, and Sunday, 12:00 PM to 5:00 PM (closed
+            Monday and Tuesday). Ask about allergies and gluten-free options when you order. Questions about an
+            order? Call us at +1-678-899-7404.
+          </p>
+        </div>
       </div>
     </div>
   </section>
