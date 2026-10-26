@@ -223,7 +223,7 @@ const HeroCopy: React.FC = () => {
   const navigate = useNavigate();
   const reduceMotion = useReducedMotion();
   return (
-    <section className="py-10 md:py-14">
+    <section className="py-10 md:py-14 acss-reveal">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={scrollReveal}
@@ -264,7 +264,7 @@ const HeroCopy: React.FC = () => {
 };
 
 const QuickActions: React.FC = () => (
-  <section className="py-12">
+  <section className="py-12 acss-reveal">
     <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {[
@@ -289,7 +289,7 @@ const QuickActions: React.FC = () => (
 const SignatureFavorites: React.FC = () => {
   const highlights = MENU_ITEMS.filter((item) => item.isSignature).slice(0, 6);
   return (
-    <section className="py-12 md:py-16">
+    <section className="py-12 md:py-16 acss-reveal">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-between gap-6 flex-wrap">
           <div>
@@ -335,7 +335,7 @@ const SignatureFavorites: React.FC = () => {
 };
 
 const WhyLoveUs: React.FC = () => (
-  <section className="py-12 md:py-16">
+  <section className="py-12 md:py-16 acss-reveal">
     <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 grid md:grid-cols-12 gap-8">
       <div className="md:col-span-6 space-y-4">
         <h2 className="text-3xl md:text-4xl font-serif text-[color:var(--primary)]">Why People Love Us</h2>
@@ -360,7 +360,7 @@ const WhyLoveUs: React.FC = () => (
 const ReservationsPreview: React.FC = () => {
   const navigate = useNavigate();
   return (
-    <section className="py-12 md:py-16">
+    <section className="py-12 md:py-16 acss-reveal">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 grid md:grid-cols-12 gap-8">
         <div className="md:col-span-6">
           <h2 className="text-3xl md:text-4xl font-serif text-[color:var(--primary)]">Reserve in Seconds</h2>
@@ -389,7 +389,7 @@ const ReservationsPreview: React.FC = () => {
   );
 };
 const ReviewsSection: React.FC = () => (
-  <section className="py-12 md:py-16">
+  <section className="py-12 md:py-16 acss-reveal">
     <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <h2 className="text-3xl md:text-4xl font-serif text-[color:var(--primary)]">Reviews & Social Proof</h2>
       <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -405,7 +405,7 @@ const ReviewsSection: React.FC = () => (
 );
 
 const YelpReviewsSection: React.FC = () => (
-  <section className="py-12 md:py-16">
+  <section className="py-12 md:py-16 acss-reveal">
     <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <div className="flex items-end justify-between gap-6 flex-wrap">
         <div>
@@ -432,7 +432,7 @@ const YelpReviewsSection: React.FC = () => (
   </section>
 );
 const LocationSection: React.FC = () => (
-  <section className="py-12 md:py-16">
+  <section className="py-12 md:py-16 acss-reveal">
     <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 grid md:grid-cols-12 gap-8">
       <div className="md:col-span-4 space-y-4">
         <h3 className="text-xl md:text-2xl font-serif text-[color:var(--primary)]">Find Us</h3>
