@@ -1211,7 +1211,8 @@ const PrivacyView: React.FC = () => (
       </p>
       <h2 className="text-white font-serif">Cookies and advertising</h2>
       <p className="text-white/70">
-        This site may display advertising served by Google AdSense. Google and its partners use cookies and
+        This site may display advertising served by Google AdSense. Google, as a third-party vendor, uses
+        cookies — including the DoubleClick cookie — to serve ads on this site. Google and its partners use cookies and
         similar technologies to serve ads based on your prior visits to this and other websites, and to measure
         how ads perform. Google's use of advertising cookies enables it and its partners to serve ads to you
         based on your visits to this site and/or other sites on the internet. You may opt out of personalized
