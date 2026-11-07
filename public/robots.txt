@@ -1,0 +1,7 @@
+# robots.txt — The Cajun Menu (thecajunmenu.site)
+# All public content is crawlable. Nothing here may block Googlebot,
+# Mediapartners-Google, or AdsBot-Google (fleet NEVER BLOCK THE MONEY law).
+User-agent: *
+Allow: /
+
+Sitemap: https://thecajunmenu.site/sitemap.xml
